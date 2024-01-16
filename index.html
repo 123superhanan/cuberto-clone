@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+    <title>CUBERTO</title>
+</head>
+<body>
+    <div id="main">
+        <div class="cursur"></div>
+        <div class="line"></div>
+        <div class="home">
+            <div id="nav">
+                <img class="magnet" src="data:image/png;base64,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" alt="">
+                <div class="right">
+                    <a href="#">Our Showreel</a>
+                    <a href="">Menu</a>
+                    <i id="menu" class="ri-menu-2-line magnet"></i>
+                </div>
+            </div>
+            <div id="home-main">
+                <h2 >We make it happen.</h2>
+            <div class="heading">
+                <h1 class="hvr"  id="h">WEBSITES</h1>
+                <h1 class="hvr" id="hh">APP</h1>
+                <h1 class="hvr" id="hhh">BRANDING</h1>
+            </div>
+            </div>
+            <div class="homeLast">
+           <div class="homep"> <p>Leading digital agency with solid design and development  expertise. We build readymade websites,
+                mobile  applications, and elaborate online business services.</p>
+            </div>
+            <div class="video">
+                <video autoplay muted loop src="./0.mp4"></video>
+                </div>
+            </div>
+           </div>
+           <div class="homeLast">
+            <div class="video">
+                <video autoplay muted loop src="./2.mp4"></video>
+                </div>
+           
+            <div class="homep"> <p>Leading digital agency with solid design and development  expertise. We build readymade websites,
+                 mobile  applications, and elaborate online business services.</p>
+             </div>
+            </div>
+            
+
+            <div class="homeLast">
+                <div class="homep"> <p>Leading digital agency with solid design and development  expertise. We build readymade websites,
+                     mobile  applications, and elaborate online business services.</p>
+                 </div>
+                 <div class="video">
+                     <video autoplay muted loop src="./3.mp4"></video>
+                     </div>
+                 </div>
+                </div>
+
+        <div class="featured">
+                <div id="fheading">
+                    <h1>featured</h1>
+                    <h1 id="hee">projects</h1>
+                </div>
+        </div>
+        <div id="featured-main">
+  
+            <div id="f-left">
+                <div class="f-left-elem">
+                    <h3>Riyadh</h3>
+                    <h1>official website of riyadh, saudi arabia's capital.</h1>
+                    <h4>design, development, product</h4>
+                </div>
+                <div class="f-left-elem">
+                    <h3>Riyadh</h3>
+                    <h1>official website of riyadh, saudi arabia's capital.</h1>
+                    <h4>design, development, product</h4>
+                </div>
+                <div class="f-left-elem">
+                    <h3>Riyadh</h3>
+                    <h1>official website of riyadh, saudi arabia's capital.</h1>
+                    <h4>design, development, product</h4>
+                </div>
+                <div class="f-left-elem last">
+                    <h3>Riyadh</h3>
+                    <h1>official website of riyadh, saudi arabia's capital.</h1>
+                    <h4>design, development, product</h4>
+                </div>
+            </div>
+            <div id="f-right">
+                <div class="images">
+                    <img src="https://images.unsplash.com/photo-1692343814412-cbe23ff32765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=767&q=80"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1609428079875-ae186c562aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=689&q=80"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1614633833026-0820552978b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                        alt="">
+                </div>
+            </div>
+           
+        </div>
+        <div class="btndiv">
+            <button class="bthn">view all projects</button>
+        </div>
+        <div id="dev">
+            <h1>Development and design resources</h1>
+            <p>We regularly release design courses, offer advice to newbie designers, walk you through creating awesome
+                effects, and share source files.</p>
+        </div>
+        <div class="slides">
+            <div class="slide">
+                <div class="img">
+                    <img src="https://cdn.cuberto.com/cb/upload/40bf072f506912f62412b0de381e350d.png" alt="">
+                </div>
+                <div class="tag">Design Course</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+
+            <div class="slide">
+                <div class="img">
+                    <img src="https://cdn.cuberto.com/cb/upload/40bf072f506912f62412b0de381e350d.png" alt="">
+                </div>
+                <div class="tag">Design Course</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+
+            <div class="slide">
+                <div class="img">
+                    <img src="https://cdn.cuberto.com/cb/upload/40bf072f506912f62412b0de381e350d.png" alt="">
+                </div>
+                <div class="tag">Design Course</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+        </div>
+        <div class="btndiv">
+            <button class="bthn">view all projects</button>
+        </div>
+        <div class="inspre">
+            <h1>New Day -</h1>
+            <h1>new inspiro.</h1>
+        </div>
+        <div class="inspire-slides">
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                        alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+
+            <div class="inspire-slide">
+                <div class="img">
+                    <img id="img1"  src="https://cdn.cuberto.com/cb/upload/40bf072f506912f62412b0de381e350d.png" alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                    alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1692343814412-cbe23ff32765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=767&q=80"
+                        alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            </div>
+            
+        </div>
+        <div class="inspire-slides">
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                        alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+
+            <div class="inspire-slide">
+                <div class="img">
+                    <img id="img1"  src="https://cdn.cuberto.com/cb/upload/40bf072f506912f62412b0de381e350d.png" alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                    alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            <div class="inspire-slide">
+                <div class="img">
+                    <img src="https://images.unsplash.com/photo-1692343814412-cbe23ff32765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=767&q=80"
+                        alt="">
+                </div>
+                <div class="tag2">cuberto-design</div>
+                <h3>How To Make Epic Website // Frontend development</h3>
+            </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="footer">
+            <div class="ftext">
+                <h1>FOOTER</h1>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing.</P>
+            </div>
+           <div class="fimg">
+            <img src="download.png" alt="">
+           </div>
+           <p>made by cuberto</p>
+        </div>
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  Gsap is needed for Basic Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- Scroll Trigger is needed for Scroll Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+<script src="script.js"></script>
+</body>
+</html>
